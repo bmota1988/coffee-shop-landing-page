@@ -1,0 +1,25 @@
+/* src\style\ButtonsSlick.css */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.custom-slick-next,
+.custom-slick-prev {
+  font-size: 24px;
+  color: #fff; /* Text color for buttons */
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.custom-slick-next:hover,
+.custom-slick-prev:hover {
+  background: #ffcc00; /* Hover background color */
+  color: #333; /* Hover text color */
+}
