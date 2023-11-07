@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../logo.svg";
 import "../style/Header.css";
 import { Link } from "react-router-dom";
 
@@ -7,7 +6,7 @@ function Header() {
   return (
     <header>
       <div className="logo-container">
-        <img src={logo} alt="Logo" />
+        <span class="material-symbols-outlined">coffee</span>
       </div>
       <nav>
         <ul>
