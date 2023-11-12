@@ -5,26 +5,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
   }
   
   .about-content {
     background: #fff;
+    width: 80vw;
+    height: 60vh;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .about-content h1 {
-    font-size: 36px;
     color: #333;
     text-align: center;
+    margin-bottom: 2rem;
   }
   
   .about-content p {
-    font-size: 18px;
     color: #777;
-    margin: 20px 0;
-    line-height: 1.5;
     text-align: justify;
   }

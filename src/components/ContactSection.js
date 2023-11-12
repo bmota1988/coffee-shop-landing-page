@@ -1,56 +1,53 @@
 import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 import "../style/ContactSection.css";
 
-const ContactSection = () => {
+function ContactSection() {
   return (
-    <div className="contact-container">
-      <h2>Contact Us</h2>
+    <div className="container-contact">
+      <h1>Contact us</h1>
       <div className="contact-info">
-        <div className="contact-info-item">
-          <span class="material-symbols-outlined">location_on</span>
-          <p>123 Coffee Street, City</p>
+        <div className="contact-phone">
+          <h4>
+            <span class="material-symbols-outlined">call</span> Phone:
+          </h4>
+          <p>123-456-7890</p>
         </div>
-        <div className="contact-info-item">
-          <span class="material-symbols-outlined">call</span>
-          <p>+1 (123) 456-7890</p>
+        <div className="contact-email">
+          <h4>
+            <span class="material-symbols-outlined">mail</span> Email:
+          </h4>
+          <p>5fXkz@example.com</p>
         </div>
-        <div className="contact-info-item">
-          <span class="material-symbols-outlined">mail</span>
-          <p>info@yourcoffeeshop.com</p>
+        <div className="contact-address">
+          <h4>
+            <span class="material-symbols-outlined">location_on</span> Address:
+          </h4>
+          <p>123 Main Street, Anytown USA</p>
         </div>
       </div>
-      <div className="social-media">
-        <a
-          href="https://www.facebook.com/yourcoffeeshop"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-facebook"></i>
-        </a>
-        <a
-          href="https://www.twitter.com/yourcoffeeshop"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-twitter"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/yourcoffeeshop"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fab fa-instagram"></i>
-        </a>
+      <div className="contact-form">
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Form.Text>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Give us your thoughts</Form.Label>
+            <Form.Control as="textarea" rows={4} />
+          </Form.Group>
+          <Button variant="success" type="submit">
+            Submit
+          </Button>
+        </Form>
       </div>
-      <form className="contact-form">
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <textarea placeholder="Message"></textarea>
-        <br />
-        <button type="submit">Send</button>
-      </form>
     </div>
   );
-};
+}
 
 export default ContactSection;

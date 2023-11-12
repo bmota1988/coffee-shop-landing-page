@@ -1,66 +1,60 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../style/ProductSlider.css";
-
-// Sample product data
-const products = [
-  {
-    id: 1,
-    name: "Espresso",
-    price: "$2.99",
-    image: "./pexels-johnny-willz-997656.jpg",
-  },
-  {
-    id: 2,
-    name: "Cappuccino",
-    price: "$3.49",
-    image: "./pexels-spencer-selover-428310.jpg",
-  },
-  {
-    id: 3,
-    name: "Latte",
-    price: "$3.99",
-    image: "./pexels-alex-tim-754958.jpg",
-  },
-  {
-    id: 4,
-    name: "Mocha",
-    price: "$4.49",
-    image: "./pexels-malidate-van-849645.jpg",
-  },
-  {
-    id: 5,
-    name: "Americano",
-    price: "$2.99",
-    image: "./pexels-skylar-kang-6207297.jpg",
-  },
-];
+import { Carousel } from "react-bootstrap";
+import Image from "react-bootstrap/Image";
 
 function ProductSlider() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: true,
-  };
-
   return (
-    <div className="product-slider">
-      <Slider {...settings}>
-        {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>{product.price}</p>
-          </div>
-        ))}
-      </Slider>
+    <div className="slider-container">
+      <Carousel variant="light" slide={false} interval={2000}>
+        <Carousel.Item>
+          <Image
+            className="d-block w-100 img-slide"
+            src="./expresso_coffee.jpg"
+            alt="Expresso"
+            fluid
+          />
+          <Carousel.Caption>
+            <h5>Expresso</h5>
+            <p>$2.99</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image
+            className="d-block w-100 img-slide"
+            src="./cappuccino.jpg"
+            alt="Cappuccino"
+            fluid
+          />
+          <Carousel.Caption>
+            <h5>Cappuccino</h5>
+            <p>$3.99</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image
+            className="d-block w-100 img-slide"
+            src="./americano.jpg"
+            alt="Americano"
+            fluid
+          />
+          <Carousel.Caption>
+            <h5>Americano</h5>
+            <p>$4.99</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image
+            className="d-block w-100 img-slide"
+            src="./latte.jpg"
+            alt="Latte"
+            fluid
+          />
+          <Carousel.Caption>
+            <h5>Latte</h5>
+            <p>$5.99</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 }
