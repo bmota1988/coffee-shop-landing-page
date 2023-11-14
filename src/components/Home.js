@@ -27,7 +27,7 @@ function Home() {
             className="hero-offcanvas"
             closeButton
           >
-            <Offcanvas.Header>
+            <Offcanvas.Header closeButton>
               <Offcanvas.Title>Welcome customer!</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

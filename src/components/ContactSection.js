@@ -1,32 +1,31 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Tabs from "react-bootstrap/Tabs";
+import Tab from "react-bootstrap/Tab";
 import "../style/ContactSection.css";
 
 function ContactSection() {
   return (
     <div className="container-contact">
-      <h1>Contact us</h1>
+      <h1>Contact Us</h1>
+      <br />
+      <br />
       <div className="contact-info">
-        <div className="contact-phone">
-          <h4>
-            <span class="material-symbols-outlined">call</span> Phone:
-          </h4>
-          <p>123-456-7890</p>
-        </div>
-        <div className="contact-email">
-          <h4>
-            <span class="material-symbols-outlined">mail</span> Email:
-          </h4>
-          <p>5fXkz@example.com</p>
-        </div>
-        <div className="contact-address">
-          <h4>
-            <span class="material-symbols-outlined">location_on</span> Address:
-          </h4>
-          <p>123 Main Street, Anytown USA</p>
-        </div>
+        <Tabs defaultActiveKey="contact" id="contact-tab" className="mb-3">
+          <Tab eventKey="phone" title="Phone">
+            +1 (555) 123-4567
+          </Tab>
+          <Tab eventKey="email" title="Email">
+            coffeedelights@example.com
+          </Tab>
+          <Tab eventKey="address" title="Address">
+            123 Main Street, Anytown USA
+          </Tab>
+        </Tabs>
       </div>
+      <br />
+      <br />
       <div className="contact-form">
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">

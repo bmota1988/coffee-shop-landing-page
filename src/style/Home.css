@@ -3,7 +3,6 @@
 .hero-section {
   background: url('../../public/pexels-lood-goosen.jpg') center/cover no-repeat;
   color: #f7f7f7;
-  padding: 160px 0;
   height: 100vh;
   text-align: center;
   display: flex;
@@ -12,11 +11,9 @@
 }
   
 .hero-content {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5rem;
   border-radius: 10px;
-  width: 80vw;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

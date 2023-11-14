@@ -7,10 +7,3 @@
   align-items: center;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 80vw;
-  padding: 1.5rem;
-}
